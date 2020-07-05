@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>E&Y</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="environments.js"></script>
+</head>
+
+<body>
+
+    <div ng-app="loaderImage" ng-controller="loaderImageController" class="container-fluid">
+        <div class="row">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="img in data" ng-click="delete($index)">
+                <img class="img-fluid mb-4" src="{{ img.url }}" loading="lazy" alt="{{ img.title }}" width="640" height="480">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
